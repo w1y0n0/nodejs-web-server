@@ -1,0 +1,15 @@
+PS C:\javascript-projects\nodejs-web-server> npm init --y
+Wrote to C:\javascript-projects\nodejs-web-server\package.json:
+
+{
+  "name": "nodejs-web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
