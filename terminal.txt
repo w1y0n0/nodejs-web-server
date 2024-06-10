@@ -98,3 +98,62 @@ Halaman tidak dapat diakses menggunakan DELETE request
 
 ###
 
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/about -i
+HTTP/1.1 200 OK
+Content-Type: text/html
+Date: Mon, 10 Jun 2024 08:55:46 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 39
+
+<h1>Halo! Ini adalah halaman about</h1>
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/test -i
+HTTP/1.1 200 OK
+Content-Type: text/html
+Date: Mon, 10 Jun 2024 08:56:04 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 33
+
+<h1>Halaman tidak ditemukan!</h1>  
+C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000/ -i
+HTTP/1.1 200 OK
+Content-Type: text/html
+Date: Mon, 10 Jun 2024 08:56:23 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 58
+
+<h1>Halaman tidak dapat diakses dengan DELETE request</h1>
+
+###
+
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/about -i
+HTTP/1.1 200 OK
+Content-Type: text/html
+Date: Mon, 10 Jun 2024 09:11:04 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 39
+
+<h1>Halo! Ini adalah halaman about</h1>
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/test -i
+HTTP/1.1 404 Not Found
+Content-Type: text/html
+Date: Mon, 10 Jun 2024 09:11:53 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 33
+
+<h1>Halaman tidak ditemukan!</h1>  
+C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000/ -i
+HTTP/1.1 400 Bad Request
+Content-Type: text/html
+Date: Mon, 10 Jun 2024 09:12:07 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 58
+
+<h1>Halaman tidak dapat diakses dengan DELETE request</h1>
+
+###
