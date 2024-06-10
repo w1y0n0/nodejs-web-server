@@ -28,12 +28,19 @@ C:\javascript-projects\nodejs-web-server>npm run start
 
 Halo, kita akan belajar membuat server
 
-###
+C:\javascript-projects\nodejs-web-server>npm run start
+
+> nodejs-web-server@1.0.0 start
+> node server.js
+
+Server berjalan pada http://localhost:5000
+
+### Membuat HTTP Server
 
 C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/
 <h1>Halo HTTP Server!</h1>
 
-###
+### Method/Verb Request
 
 C:\javascript-projects\nodejs-web-server>curl -X POST http://localhost:5000
 <h1>Halo HTTP Server!</h1>
@@ -44,7 +51,7 @@ C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000
 C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000
 <h1>Halo HTTP Server!</h1>
 
-###
+### Method/Verb Request
 
 C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000
 <h1>Hello!</h1>
@@ -55,19 +62,19 @@ C:\javascript-projects\nodejs-web-server>curl -X PUT http://localhost:5000
 C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000
 <h1>Salam!</h1>
 
-###
+### BODY REQUEST
 
 C:\javascript-projects\nodejs-web-server>curl -X POST -H "Content-Type: application/json" http://localhost:5000 -d "{\"name\": \"Dicoding\"}"
 <h1>Hai, {"name": "Dicoding"}!</h1>
 
-###
+### BODY REQUEST
 
 C:\javascript-projects\nodejs-web-server>curl -X POST -H "Content-Type: application/json" http://localhost:5000 -d "{\"name\": \"Dicoding\"}"
 <h1>Hai, Dicoding!</h1>
 C:\javascript-projects\nodejs-web-server>curl -X POST -H "Content-Type: application/json" http://localhost:5000 -d "{\"name\": \"Dimas\"}"
 <h1>Hai, Dimas!</h1>
 
-###
+### ROUTING REQUEST
 
 C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/home
 <h1>Halaman tidak ditemukan!</h1>
@@ -76,7 +83,7 @@ C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/hello
 C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/test
 <h1>Halaman tidak ditemukan!</h1>
 
-###
+### ROUTING REQUEST
 
 C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000
 <h1>Ini adalah homepage</h1>
@@ -85,7 +92,7 @@ C:\javascript-projects\nodejs-web-server>curl -X POST http://localhost:5000
 C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000
 <h1>Halaman tidak dapat diakses dengan DELETE request</h1>
 
-###
+### ROUTING REQUEST
 
 C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/about
 <h1>Halo! Ini adalah halaman about</h1>
@@ -96,7 +103,7 @@ Halaman tidak dapat diakses menggunakan PUT request
 C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000/about
 Halaman tidak dapat diakses menggunakan DELETE request
 
-###
+### RESPONSE STATUS
 
 C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/about -i
 HTTP/1.1 200 OK
@@ -126,7 +133,7 @@ Content-Length: 58
 
 <h1>Halaman tidak dapat diakses dengan DELETE request</h1>
 
-###
+### RESPONSE STATUS
 
 C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/about -i
 HTTP/1.1 200 OK
@@ -155,5 +162,18 @@ Keep-Alive: timeout=5
 Content-Length: 58
 
 <h1>Halaman tidak dapat diakses dengan DELETE request</h1>
+
+### RESPONSE HEADER
+
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000 -i
+HTTP/1.1 200 OK
+Content-Type: application/json
+Powered-By: Node.js
+Date: Mon, 10 Jun 2024 13:30:28 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 28
+
+<h1>Ini adalah homepage</h1>
 
 ###
