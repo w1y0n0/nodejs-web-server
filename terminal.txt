@@ -176,4 +176,18 @@ Content-Length: 28
 
 <h1>Ini adalah homepage</h1>
 
+### RESPONSE BODY
+
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/anything
+{"message":"Halaman tidak ditemukan!"}
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/test
+{"message":"Halaman tidak ditemukan!"}
+
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/
+{"message":"Ini adalah homepage"}
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/about
+{"message":"Halo! Ini adalah halaman about"}
+C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000/   
+{"message":"Halaman tidak dapat diakses dengan DELETE request"}
+
 ###
