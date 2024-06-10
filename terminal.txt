@@ -68,3 +68,33 @@ C:\javascript-projects\nodejs-web-server>curl -X POST -H "Content-Type: applicat
 <h1>Hai, Dimas!</h1>
 
 ###
+
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/home
+<h1>Halaman tidak ditemukan!</h1>
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/hello
+<h1>Halaman tidak ditemukan!</h1>
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/test
+<h1>Halaman tidak ditemukan!</h1>
+
+###
+
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000
+<h1>Ini adalah homepage</h1>
+C:\javascript-projects\nodejs-web-server>curl -X POST http://localhost:5000
+<h1>Halaman tidak dapat diakses dengan POST request</h1>
+C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000
+<h1>Halaman tidak dapat diakses dengan DELETE request</h1>
+
+###
+
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/about
+<h1>Halo! Ini adalah halaman about</h1>
+C:\javascript-projects\nodejs-web-server>curl -X POST -H "Content-Type: application/json" http://localhost:5000/about -d "{\"name\": \"Dicoding\"}"
+<h1>Halo, Dicoding! Ini adalah halaman about</h1>
+C:\javascript-projects\nodejs-web-server>curl -X PUT http://localhost:5000/about
+Halaman tidak dapat diakses menggunakan PUT request
+C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000/about
+Halaman tidak dapat diakses menggunakan DELETE request
+
+###
+
