@@ -1,4 +1,4 @@
-PS C:\javascript-projects\nodejs-web-server> npm init --y
+C:\javascript-projects\nodejs-web-server> npm init --y
 Wrote to C:\javascript-projects\nodejs-web-server\package.json:
 
 {
@@ -13,3 +13,24 @@ Wrote to C:\javascript-projects\nodejs-web-server\package.json:
   "author": "",
   "license": "ISC"
 }
+
+###
+
+CATATAN:
+--y pada akhir perintah tersebut berfungsi untuk menjawab seluruh pertanyaan yang diberikan NPM ketika membuat proyek baru dengan jawaban/nilai default.
+
+###
+
+C:\javascript-projects\nodejs-web-server>npm run start
+
+> nodejs-web-server@1.0.0 start
+> node server.js
+
+Halo, kita akan belajar membuat server
+
+###
+
+C:\javascript-projects\nodejs-web-server>curl -X GET http://localhost:5000/
+<h1>Halo HTTP Server!</h1>
+
+###
