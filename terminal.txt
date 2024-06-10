@@ -56,3 +56,15 @@ C:\javascript-projects\nodejs-web-server>curl -X DELETE http://localhost:5000
 <h1>Salam!</h1>
 
 ###
+
+C:\javascript-projects\nodejs-web-server>curl -X POST -H "Content-Type: application/json" http://localhost:5000 -d "{\"name\": \"Dicoding\"}"
+<h1>Hai, {"name": "Dicoding"}!</h1>
+
+###
+
+C:\javascript-projects\nodejs-web-server>curl -X POST -H "Content-Type: application/json" http://localhost:5000 -d "{\"name\": \"Dicoding\"}"
+<h1>Hai, Dicoding!</h1>
+C:\javascript-projects\nodejs-web-server>curl -X POST -H "Content-Type: application/json" http://localhost:5000 -d "{\"name\": \"Dimas\"}"
+<h1>Hai, Dimas!</h1>
+
+###
